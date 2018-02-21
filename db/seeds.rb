@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-projects = Project.create([{name: 'start'}, {name: 'alpha'}, {name: 'beta'}, {name: 'Ngamma'}])
+projects = Project.create([{name: 'start'}, {name: 'alpha'}, {name: 'betta'}, {name: 'Ngaamma'}])
 
 tasks = Task.create([{name: 'first_task_start', status: 'on', project_id: 1},
                      {name: 'second_task_start', status: 'off', project_id: 1},

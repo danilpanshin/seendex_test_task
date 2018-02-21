@@ -21,6 +21,15 @@ class Project < ApplicationRecord
   end
 
 
+  def projects_with_a_in_the_middle_of_name #Получение всех проектов, у которых есть символ 'a' в середине названия
+
+  Project.joins(:tasks).find_by_sql("SELECT * FROM 'projects' WHERE SUBSTR('projects'.'name', LENGTH('projects'.'name')/2+1, 1) = 'a'").map { |p|
+         {name: p.name,
+          count: p.tasks.count
+           }
+         }
+
+  end
 
 end
 
