@@ -6,6 +6,7 @@ class Project < ApplicationRecord
       {
           name: p.name,
           count: p.tasks.count
+      }
       }.uniq.sort_by! {|n| n[:name] }
 
   end
@@ -15,6 +16,7 @@ class Project < ApplicationRecord
       {
           name: p.name,
           count: p.tasks.count
+      }
       }.uniq.sort! { |b,a| a[:count] <=> b[:count] }
   end
 
